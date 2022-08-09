@@ -13,10 +13,9 @@ firebase=pyrebase.initialize_app(firebaseConfig)
 
 db=firebase.database()
 
-#Push Data
-# data={"name": "Azhara", "age":22, "addres":["Bukit Rahmah"]}
-# db.push(data)
-
-#Branch Value
-data={"age":22, "addres":"GBR 2"}
-db.child("Yazid").set(data)
+data={"Height": "100",
+    "Distance From Home":"50"+" m",
+    "Coordinate": "x"+","+"y",
+    "Ground Speed":"15"+" m/s",
+    "Vertical Speed":"7"+" m/s"}
+db.child("vehicle_state").set(data)
