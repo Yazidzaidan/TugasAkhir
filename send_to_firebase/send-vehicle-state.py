@@ -21,7 +21,7 @@ parser = argparse.ArgumentParser(description='Print out vehicle state informatio
 parser.add_argument('--connect', 
                    help="vehicle connection target string. If not specified, SITL automatically started and used.")
 args = parser.parse_args()
-connection_string = 'COM14'
+connection_string = '/dev/ttyACM0'
 sitl = None
 print("\nConnecting to vehicle on: %s" % connection_string)
 vehicle = connect(connection_string, wait_ready=True)
